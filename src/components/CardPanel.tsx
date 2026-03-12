@@ -20,7 +20,12 @@ export default function CardPanel() {
         }
     }
 
-    const [ratingList, dispatchRating] = useReducer(ratingReducer,new Map<string,number>())
+    const [ratingList, dispatchRating] = useReducer(ratingReducer,new Map<string,number>([
+        ["The Bloom Pavilion", 0],
+        ["Spark Space", 0],
+        ["The Grand Table", 0],
+    ]
+    ))
 
     const mockVenueRepo = [
         {venueName:"The Bloom Pavilion", imgSrc:"/img/bloom.jpg"},
